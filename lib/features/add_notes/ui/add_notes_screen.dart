@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
 import 'package:notes_app/constants/global_variables.dart';
 import 'package:notes_app/features/add_notes/cubit/add_note_cubit.dart';
@@ -34,7 +35,7 @@ class _AddNotesScreenState extends State<AddNotesScreen> {
         backgroundColor: GlobalVariables.notesColor[color_id],
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(16.0.w),
         child: Form(
           key: notesFormKey,
           child: Column(
@@ -49,17 +50,22 @@ class _AddNotesScreenState extends State<AddNotesScreen> {
                     }
                     return null;
                   },
-                  decoration: const InputDecoration(
-                    label: Text("Title"),
+                  decoration: InputDecoration(
+                    label: Text(
+                      "Title",
+                      style: TextStyle(
+                        fontSize: 16.sp,
+                      ),
+                    ),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.all(
-                        Radius.circular(30),
+                        Radius.circular(30.r),
                       ),
                     ),
                   ),
                 ),
-                const SizedBox(
-                  height: 18,
+                SizedBox(
+                  height: 18.h,
                 ),
                 TextFormField(
                   controller: _contentController,
@@ -71,21 +77,26 @@ class _AddNotesScreenState extends State<AddNotesScreen> {
                     }
                     return null;
                   },
-                  decoration: const InputDecoration(
-                    label: Text("Description"),
+                  decoration: InputDecoration(
+                    label: Text(
+                      "Description",
+                      style: TextStyle(
+                        fontSize: 16.sp,
+                      ),
+                    ),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.all(
-                        Radius.circular(30),
+                        Radius.circular(34.r),
                       ),
                     ),
                   ),
                 ),
-                const SizedBox(height: 20),
+                SizedBox(height: 20.h),
                 Text(
                   date,
-                  style: const TextStyle(fontSize: 20),
+                  style: TextStyle(fontSize: 16.sp),
                 ),
-                const SizedBox(height: 20),
+                SizedBox(height: 20.h),
                 BlocListener<AddNoteCubit, AddNoteState>(
                   bloc: addNoteCubit,
                   listener: (context, state) {
@@ -120,9 +131,9 @@ class _AddNotesScreenState extends State<AddNotesScreen> {
                     style: ElevatedButton.styleFrom(
                       elevation: 1,
                     ),
-                    child: const Text(
+                    child: Text(
                       "Save",
-                      style: TextStyle(fontSize: 20),
+                      style: TextStyle(fontSize: 18.sp),
                     ),
                   ),
                 )

@@ -14,7 +14,9 @@ class GlobalVariables {
     Color.fromRGBO(150, 110, 250, 1),
     Color.fromRGBO(220, 191, 250, 1),
     Color.fromRGBO(215, 248, 242, 1),
+    Color.fromRGBO(215, 248, 242, 1),
     Colors.green.shade200,
-    Colors.yellow.shade200
+    Colors.yellow.shade200,
+    Colors.orange.shade200,
   ];
 }

@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:notes_app/features/add_notes/ui/add_notes_screen.dart';
 import 'package:notes_app/features/home/cubit/home_cubit.dart';
 import 'package:notes_app/features/home/notes_repository.dart';
@@ -32,13 +33,13 @@ class _HomeState extends State<Home> {
     return Scaffold(
       backgroundColor: GlobalVariables.bgColor,
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(16.0.w),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 30.0),
+              padding: EdgeInsets.only(top: 25.0.w),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -46,7 +47,7 @@ class _HomeState extends State<Home> {
                     'Remind me by Aditi',
                     style: TextStyle(
                       color: GlobalVariables.titleColor,
-                      fontSize: 28,
+                      fontSize: 24.sp,
                       fontWeight: FontWeight.w700,
                     ),
                   ),
@@ -54,21 +55,19 @@ class _HomeState extends State<Home> {
                       onPressed: () {},
                       icon: Icon(
                         Icons.search_outlined,
-                        size: 34,
+                        size: 30.w,
                         color: GlobalVariables.titleColor,
                       ))
                 ],
               ),
             ),
             SizedBox(
-              height: 10,
+              height: 10.h,
             ),
             Text(
               'Your notes',
-              style: TextStyle(fontSize: 20, color: GlobalVariables.titleColor),
-            ),
-            const SizedBox(
-              height: 20,
+              style:
+                  TextStyle(fontSize: 20.sp, color: GlobalVariables.titleColor),
             ),
             Expanded(child: BlocBuilder<HomeCubit, HomeState>(
               builder: (context, state) {
@@ -80,11 +79,11 @@ class _HomeState extends State<Home> {
                 if (state is HomeLoaded) {
                   final notes = state.notes;
                   return notes.isEmpty
-                      ? const Center(
+                      ? Center(
                           child: Text(
                           "No notes created",
                           style: TextStyle(
-                            fontSize: 28,
+                            fontSize: 26.sp,
                             color: Colors.white,
                           ),
                         ))
@@ -109,8 +108,8 @@ class _HomeState extends State<Home> {
                   return Center(
                     child: Text(
                       state.errorMessage.toString(),
-                      style: const TextStyle(
-                        fontSize: 28,
+                      style: TextStyle(
+                        fontSize: 24.sp,
                         color: Colors.white,
                       ),
                     ),
@@ -123,7 +122,7 @@ class _HomeState extends State<Home> {
         ),
       ),
       floatingActionButton: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: EdgeInsets.all(8.0.w),
         child: FloatingActionButton(
           onPressed: () {
             Navigator.of(context).push(MaterialPageRoute(
