@@ -1,16 +1,9 @@
 # notes_app
+# Screenshots
 
-A new Flutter project.
+![WhatsApp Image 2023-08-12 at 12 49 44](https://github.com/ash2121/notes_app/assets/76738174/0760cbb5-449b-4db4-bdbe-74d1619ab35d)
 
-## Getting Started
+![WhatsApp Image 2023-08-12 at 12 49 45](https://github.com/ash2121/notes_app/assets/76738174/f811eece-0644-45cb-86c1-00c28420f96d)
+![WhatsApp Image 2023-08-12 at 12 49 45](https://github.com/ash2121/notes_app/assets/76738174/d3199d8d-7c31-4100-9b72-3153b4099fe8)
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
