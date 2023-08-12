@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 class GlobalVariables {
   static Color mainColor = const Color(0xFF000633);
-  static Color bgColor = const Color.fromRGBO(37, 31, 72, 1);
+  static Color bgColor = const Color.fromRGBO(37, 37, 37, 1);
   static Color buttonColor = const Color.fromRGBO(37, 31, 72, 0.4);
+  static Color contentColor = const Color.fromRGBO(231, 231, 231, 1);
   static Color accentColor = const Color(0xFF0065FF);
   static Color titleColor = Colors.white70;
 
